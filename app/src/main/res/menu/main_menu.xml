@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/backgrnd"
+        android:orderInCategory="1"
+        android:icon="@drawable/splscr"
+        android:title="Фон" />
+       <item
+        android:id="@+id/faq_game"
+        android:orderInCategory="2"
+        android:icon="@mipmap/faq"
+        android:title="Правила" />
+
+    <item
+        android:id="@+id/exit_program"
+        android:orderInCategory="3"
+        android:icon="@mipmap/exit"
+        android:title="Выход" />
+</menu>

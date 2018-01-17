@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+   <ImageView
+       android:id="@+id/splash_screen"
+       android:layout_width="400dp"
+       android:layout_height="620dp"
+       android:layout_gravity="center"
+       android:adjustViewBounds="false"
+       android:cropToPadding="false"
+       android:scaleType="fitXY"
+       android:src="@drawable/splscr"
+       android:visibility="visible" />
+
+    <Button
+
+        android:id="@+id/btnNewgame"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="193dp"
+        android:background="@drawable/button_splashscreen"
+        android:elevation="0dp"
+        android:fontFamily="serif"
+        android:onClick="newgame"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:text="НОВАЯ ИГРА"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"></Button>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/btnNewgame"
+        android:layout_alignLeft="@+id/btnNewgame"
+        android:layout_alignRight="@+id/btnNewgame"
+        android:layout_alignStart="@+id/btnNewgame"
+        android:layout_alignTop="@+id/btnNewgame"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="97dp"
+        android:background="@drawable/button_splashscreen"
+        android:fontFamily="serif"
+        android:onClick="exit"
+        android:paddingHorizontal="20dp"
+        android:text="ВЫХОД"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"></Button>
+
+  </RelativeLayout>

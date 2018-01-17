@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.blackjack.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/greenbackground"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:id="@+id/inform_panel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total_bet"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="Total bet: "
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="Balance: "
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="WIN:"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chips_panel"
+            android:layout_width="85dp"
+            android:layout_height="340dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/dielers_cards"
+            android:background="@drawable/chips_panel"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/chip100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/chips_button"
+                app:srcCompat="@drawable/chip100" />
+
+            <ImageButton
+                android:id="@+id/chip25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/chips_button"
+                app:srcCompat="@drawable/chip25" />
+
+            <ImageButton
+                android:id="@+id/chip5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/chips_button"
+                app:srcCompat="@drawable/chip5" />
+
+            <ImageButton
+                android:id="@+id/chip1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/chips_button"
+                app:srcCompat="@drawable/chip1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dielers_cards"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/inform_panel"
+            android:layout_marginTop="54dp"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:text="Dieler's hand:"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/dialer_cards"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/dielers_cards"
+            android:layout_marginTop="11dp"
+            android:visibility="invisible">
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/your_hand"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/dialer_cards"
+            android:layout_marginTop="30dp"
+            android:fontFamily="casual"
+            android:text="Your hand:"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/your_cards"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/your_hand"
+            android:layout_marginTop="13dp"
+            android:visibility="invisible">
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/place_bets"
+            android:layout_width="95dp"
+            android:layout_height="75dp"
+            android:layout_alignBottom="@+id/your_hand"
+            android:layout_alignLeft="@+id/dialer_cards"
+            android:layout_alignStart="@+id/dialer_cards"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:background="@drawable/bets_button"
+            android:contextClickable="false"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/place_text"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Place your bets"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/clear_double_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/action_button"
+                    android:onClick="click_clear_double_no"
+                    app:srcCompat="@drawable/clear_new" />
+
+                <ImageButton
+                    android:id="@+id/rebet_deal_hit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/action_button"
+                    android:onClick="click_rebet_deal_hit"
+                    app:srcCompat="@drawable/deal_new" />
+
+                <ImageButton
+                    android:id="@+id/undo_stand_rebet_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/action_button"
+                    android:onClick="click_undo_stand_rebet_yes"
+                    app:srcCompat="@drawable/undo_new" />
+            </TableRow>
+
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
